@@ -1,12 +1,18 @@
 import React, { Fragment } from 'react'
 
+
 const Table = (props) => {
 
+  
+
   const renderPlates = (array) => {
+    console.log(props)
     return array.map((x, index) => {
       return <div className="empty-plate" style={{ top: -7 * index }}/>
     })
   }
+
+
 
   return (
     <Fragment>
@@ -21,7 +27,7 @@ const Table = (props) => {
                and renders an empty plate
                for every element in the array
             */
-            renderPlates([])
+            renderPlates([props.EmptyPlates])
           }
         </div>
       </div>
